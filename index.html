@@ -1,17 +1,49 @@
-<!doctype html>
-<html lang=en>
+﻿<!doctype html>
+<html lang=en >
 <head>
-<title>patterns-dev</title>
-<meta charset=utf-8>
+<meta charset=utf-8 >
+<title>Index Markdown Reader R1</title>
+<meta name=viewport content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,minimal-ui' >
+<meta name=description content='Markdown reader template file' >
+<meta name=keywords content='JavaScript,GitHub,FOSS,3D,STEM' >
+<meta name=date content='2016-03-12' >
 </head>
 <body>
+<script src=http://cdnjs.cloudflare.com/ajax/libs/showdown/1.3.0/showdown.min.js ></script>
 <script>
 
-	document.body.style.cssText = ' font: bold 12pt monospace; ';
-	var info = document.body.appendChild( document.createElement( 'div' ) );
-	info.innerHTML = '<h1>Patterns Dev</h1>' +
-		'<p><a href="http://patterns-dev.github.io/patterns/newpat/newpat1/newpat1.htm#pat1" target="_blank">patterns</a></p>' +
-	'';
+	init();
+
+	function init() {
+
+		var css = document.head.appendChild( document.createElement( 'style' ) );
+		css.innerHTML =
+
+			'body { font: 12pt monospace; left: 0; margin: 0 auto; max-width: 800px; right: 0;  }' +
+			'h2 { margin: 0; }' +
+			'h2 a { text-decoration: none; }' +
+
+		'';
+
+		contents = document.body.appendChild( document.createElement( 'div' ) );
+		contents.id = 'contents';
+
+		var converter = new showdown.Converter( { strikethrough: true, literalMidWordUnderscores: true, simplifiedAutoLink: true, tables: true });
+		var fileName = location.hash ? location.hash.substr( 1 ) : 'readme.md';
+
+		var xhr = new XMLHttpRequest();
+		xhr.open( 'get', fileName, true );
+		xhr.onreadystatechange = function() {
+
+			if ( xhr.readyState !== 4 ) { return; }
+
+			contents.innerHTML = converter.makeHtml( xhr.responseText );
+
+		};
+
+		xhr.send( null );
+
+	}
 
 </script>
 </body>
