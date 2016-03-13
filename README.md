@@ -1,9 +1,15 @@
+<span style=display:none; >[You are now in a GitHub source code view - click this link to view this read me file as a web page]( https://patterns-dev.github.io/ "View file as a web page." ) </span>
+<input onclick=window.location.href='https://github.com/patterns-dev'; type=button  value='You are now in a GitHub web page view - Click this button to view this read me file as source code' />
+
+
+
+
 Patterns Dev
 ===
 
-[New Patterns]( ./patterns/newpat/newpat0/new-patterns-introduction.htm )
+[New Patterns]( http://patterns-dev.github.io/patterns/newpat/newpat0/new-patterns-introduction.htm )
 
-[Clean2 Patterns]( ./patterns/clean2/patterns.htm )
+[Clean2 Patterns]( http://patterns-dev.github.io/patterns/clean2/patterns.htm )
 
 [Elsewhere]( http://caper.ws/patterns/ )
 
