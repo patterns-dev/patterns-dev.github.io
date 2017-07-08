@@ -65,7 +65,7 @@ http://library.uniteddiversity.coop/Ecological_Building/A_Pattern_Language.pdf
 
 https://archive.org/details/APatternLanguage
 
-Recommendation by Kevin Kelly:
+Recommendation by [Kevin Kelly]( https://en.wikipedia.org/wiki/Kevin_Kelly_(editor) )
 
 http://recomendo.com/issues/a-pattern-language-mindly-textgrabber-63421
 
